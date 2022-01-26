@@ -40,4 +40,5 @@ public class FirstBeansConfig {
     BeanF getBeanF(){
         return new BeanF();
     }
+
 }
