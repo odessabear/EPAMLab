@@ -9,35 +9,35 @@ import org.springframework.context.annotation.*;
 public class FirstBeansConfig {
 
     @Bean
-    public BeanA getBeanA() {
+    public BeanA beanA() {
         return new BeanA();
     }
 
     @Bean(initMethod = "customIntiMethod", destroyMethod = "customDestroyMethod")
-    @DependsOn("getBeanD")
-    public BeanB getBeanB() {
+    @DependsOn("beanD")
+    public BeanB beanB() {
         return new BeanB();
     }
 
     @Bean(initMethod = "customIntiMethod", destroyMethod = "customDestroyMethod")
-    @DependsOn({"getBeanB", "getBeanD"})
-    public BeanC getBeanC() {
+    @DependsOn({"beanB", "beanD"})
+    public BeanC beanC() {
         return new BeanC();
     }
 
     @Bean(initMethod = "customIntiMethod", destroyMethod = "customDestroyMethod")
-    public BeanD getBeanD() {
+    public BeanD beanD() {
         return new BeanD();
     }
 
     @Bean
-    public BeanE getBeanE() {
+    public BeanE beanE() {
         return new BeanE();
     }
 
     @Bean
     @Lazy
-    BeanF getBeanF(){
+    BeanF beanF(){
         return new BeanF();
     }
 }

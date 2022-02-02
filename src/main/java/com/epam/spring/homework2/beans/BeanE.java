@@ -1,12 +1,10 @@
 package com.epam.spring.homework2.beans;
 
 import com.epam.spring.homework2.validator.BeansValidator;
-import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-@Component
 public class BeanE implements BeansValidator {
 
     private String name;

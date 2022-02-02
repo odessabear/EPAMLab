@@ -1,9 +1,7 @@
 package com.epam.spring.homework2.beans;
 
 import com.epam.spring.homework2.validator.BeansValidator;
-import org.springframework.stereotype.Component;
 
-@Component
 public class BeanF implements BeansValidator {
 
     private String name;

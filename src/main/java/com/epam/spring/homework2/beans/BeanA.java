@@ -3,15 +3,11 @@ package com.epam.spring.homework2.beans;
 import com.epam.spring.homework2.validator.BeansValidator;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.stereotype.Component;
 
-@Component
 public class BeanA implements BeansValidator, InitializingBean, DisposableBean {
 
     private String name;
     private int value;
-
-    public BeanA(){}
 
     @Override
     public String toString() {

@@ -2,9 +2,7 @@ package com.epam.spring.homework2.beans;
 
 import com.epam.spring.homework2.validator.BeansValidator;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
-@Component
 public class BeanC implements BeansValidator {
 
     @Value("${beanC.name}")
