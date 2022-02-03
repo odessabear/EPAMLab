@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 public class SecondBeansConfig {
 
     @Bean
-    public MyCustomBeanPostProcessor myCustomBenPostProcessor() {
+    public MyCustomBeanPostProcessor myCustomBeanPostProcessor() {
         return new MyCustomBeanPostProcessor();
     }
 

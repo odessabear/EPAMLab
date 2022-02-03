@@ -1,9 +1,8 @@
 package com.epam.spring.homework2.beans;
 
-import com.epam.spring.homework2.validator.BeansValidator;
 import org.springframework.beans.factory.annotation.Value;
 
-public class BeanB implements BeansValidator {
+public class BeanB implements ParentBean{
 
     @Value("${beanB.name}")
     private String name;
@@ -33,12 +32,12 @@ public class BeanB implements BeansValidator {
     }
 
     @Override
-    public void validateBean() {
-        System.out.println(this.getClass().getSimpleName() + " validateBean() method");
-        if (name != null && value > 0){
-            System.out.println(this.getClass().getSimpleName() + " is valid");
-        }else {
-            System.out.println(this.getClass().getSimpleName() + " is not valid");
-        }
+    public String getName() {
+        return this.name;
+    }
+
+    @Override
+    public int getValue() {
+        return this.value;
     }
 }

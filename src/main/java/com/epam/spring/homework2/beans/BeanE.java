@@ -1,11 +1,10 @@
 package com.epam.spring.homework2.beans;
 
-import com.epam.spring.homework2.validator.BeansValidator;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-public class BeanE implements BeansValidator {
+public class BeanE implements ParentBean{
 
     private String name;
     private int value;
@@ -30,12 +29,12 @@ public class BeanE implements BeansValidator {
     }
 
     @Override
-    public void validateBean() {
-        System.out.println(this.getClass().getSimpleName() + " validateBean() method");
-        if (name != null && value > 0){
-            System.out.println(this.getClass().getSimpleName() + " is valid");
-        }else {
-            System.out.println(this.getClass().getSimpleName() + " is not valid");
-        }
+    public String getName() {
+        return this.name;
+    }
+
+    @Override
+    public int getValue() {
+        return this.value;
     }
 }
