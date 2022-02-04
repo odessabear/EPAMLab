@@ -9,8 +9,6 @@ public class BeanB implements ParentBean{
     @Value("${beanB.value}")
     private int value;
 
-    public BeanB(){}
-
     @Override
     public String toString() {
         return "BeanB{" +
