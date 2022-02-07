@@ -9,7 +9,8 @@ public class ApplicationRunner {
                 new AnnotationConfigApplicationContext(FirstBeansConfig.class);
 
         for (String beanDefinitionName : applicationContext.getBeanDefinitionNames()) {
-            System.out.println(beanDefinitionName);
+            System.out.println("Bean name: " + beanDefinitionName);
+            System.out.println("Bean definition: " + applicationContext.getBeanDefinition(beanDefinitionName));
         }
 
         applicationContext.close();
