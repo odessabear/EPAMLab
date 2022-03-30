@@ -17,5 +17,7 @@ public interface UserService {
 
     void blockUser(String email);
 
+    void unblockUser(String email);
+
     void deleteUser(String email);
 }
